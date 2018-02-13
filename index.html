@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html charset=utf-8" />
+	<meta name="content-language" content="tr" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Rate App</title>
+	<link rel="stylesheet" type="text/css" href="app.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+<div id="box">
+
+<div id="appBox">
+	<div id="stars">
+		<div 
+			v-for="(isShine,i) in stars" 
+			v-bind:class="{active:isShine}" 
+			v-on:mouseover="shineStar(i)" 
+			v-on:mouseleave="shineStar(-1)"
+			v-on:click="isRated = !isRated"
+			class="star"
+		>
+				<i class="fas fa-star"></i>
+		</div>
+	</div>
+	<p>{{rate}}</p>
+	<p v-show="isRated"> click stars to change rate</p>
+</div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

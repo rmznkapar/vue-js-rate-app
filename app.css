@@ -1,0 +1,31 @@
+html,body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: sans-serif;
+}
+#box{
+	display: table;
+    position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+#appBox{
+	display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#stars{
+  display: inline-block;
+}
+
+.star{
+  display: inline-block;
+  float: left;
+  font-size: 2.5em;
+}
+.active{
+  color: blue;
+}
